@@ -1,6 +1,6 @@
 /*
     Created on : 18-May-2020, 05:15:59 AM
-    Author     : Marcos Freire
+    Author     : Marc Freir
     License    : This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
 */
 
