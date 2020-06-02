@@ -1,0 +1,341 @@
+/*
+    Created on : 29-May-2020, 05:15:59 AM
+    Author     : Marc Freir
+    License    : This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+*/
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0075FF;
+}
+
+.container {
+    background-color: #FFFFFF;
+    width: 80%;
+    margin: auto;
+    border-radius: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+/*#GRID#*/
+.grid-grid-container {
+    display: grid;
+    grid-template-columns: 0.7fr 1.6fr 0.7fr;
+    grid-template-rows: 0.8fr 0.9fr 0.9fr 0.9fr 1.5fr;
+    gap: 1px 1px;
+    grid-template-areas: "grid-titleHeader grid-titleHeader grid-titleHeader" "grid-redLabel grid-redSlider grid-redValue" "grid-greenLabel grid-greenSlider grid-greenValue" "grid-blueLabel grid-blueSlider grid-blueValue" "grid-outputColor grid-outputColor grid-outputColor"
+}
+
+.grid-titleHeader { grid-area: grid-titleHeader; }
+
+.grid-redLabel { grid-area: grid-redLabel; }
+
+.grid-redSlider { grid-area: grid-redSlider; }
+
+.grid-redValue { grid-area: grid-redValue; }
+
+.grid-greenLabel { grid-area: grid-greenLabel; }
+
+.grid-greenSlider { grid-area: grid-greenSlider; }
+
+.grid-greenValue { grid-area: grid-greenValue; }
+
+.grid-blueLabel { grid-area: grid-blueLabel; }
+
+.grid-blueSlider { grid-area: grid-blueSlider; }
+
+.grid-blueValue { grid-area: grid-blueValue; }
+
+.grid-outputColor { grid-area: grid-outputColor; }
+
+/*Centering the grid-titleHeader, grid-redSlider,   grid-redValue
+--------------------------------, grid-greenSlider, grid-greenValue
+--------------------------------, grid-blueSlider,  grid-blueValue
+and ----------------------------, grid-outputColor*/
+
+.grid-titleHeader, .grid-redSlider, .grid-redValue, .grid-greenSlider, .grid-greenValue, 
+.grid-blueSlider, .grid-blueValue, .grid-outputColor {
+    text-align: center;
+    margin: auto;
+}
+.grid-redLabel, .grid-greenLabel, .grid-blueLabel {
+    margin: auto;
+}
+.grid-redSlider, .grid-greenSlider, .grid-blueSlider {
+    min-width: 100%;
+}
+
+/*###SLIDERS - MODIFIED(start)###*/
+#inputRangeRed, #inputRangeGreen, #inputRangeBlue {
+    background-color: #FFFFFF;
+    width: 100%;
+}
+/**For all ranges**/
+input[type=range] {
+    height: 25px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 50%;
+}
+/**For all tracks**/
+input[type=range]:focus {
+    outline: none;
+}
+/*Only for red track*/
+input[id=inputRangeRed]::-webkit-slider-runnable-track {
+    width: 50%;
+    height: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
+    border-radius: 5px;
+    border: 0px solid rgb(25, 25, 25);
+}
+/**Only for green track**/
+input[id=inputRangeGreen]::-webkit-slider-runnable-track {
+    width: 50%;
+    height: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,255,0,1) 100%);
+    border-radius: 5px;
+    border: 0px solid rgb(25, 25, 25);
+}
+/**Only for blue track**/
+input[id=inputRangeBlue]::-webkit-slider-runnable-track {
+    width: 50%;
+    height: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,255,1) 100%);
+    border-radius: 5px;
+    border: 0px solid rgb(25, 25, 25);
+}
+
+/**For all thumbs**/
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
+    border: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #000000;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px;
+}
+/**Only for red track**/
+input[id=inputRangeRed]:focus::-webkit-slider-runnable-track {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
+}
+/**Only for green track**/
+input[id=inputRangeGreen]:focus::-webkit-slider-runnable-track {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,255,0,1) 100%);
+}
+/**Only for blue track**/
+input[id=inputRangeBlue]:focus::-webkit-slider-runnable-track {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,255,1) 100%);
+}
+
+/**Only for red track**/
+input[id=inputRangeRed]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
+    border-radius: 5px;
+    border: 0px solid rgb(25, 25, 25);
+}
+/**Only for green track**/
+input[id=inputRangeGreen]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,255,0,1) 100%);
+    border-radius: 5px;
+    border: 0px solid rgb(25, 25, 25);
+}
+/**Only for blue track**/
+input[id=inputRangeBlue]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,255,1) 100%);
+    border-radius: 5px;
+    border: 0px solid rgb(25, 25, 25);
+}
+
+
+/**For all thumbs**/
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
+    border: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #000000;
+    cursor: pointer;
+}
+/**For all tracks**/
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+/**Only for red slider**/
+input[id=inputRangeRed]::-ms-fill-lower {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
+    border: 0px solid rgb(25, 25, 25);
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
+}
+/**Only for green slider**/
+input[id=inputRangeGreen]::-ms-fill-lower {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,255,0,1) 100%);
+    border: 0px solid rgb(25, 25, 25);
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
+}
+/**Only for blue slider**/
+input[id=inputRangeBlue]::-ms-fill-lower {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,255,1) 100%);
+    border: 0px solid rgb(25, 25, 25);
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
+}
+
+/**Only for red slider**/
+input[id=inputRangeRed]::-ms-fill-upper {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
+    border: 0px solid rgb(25, 25, 25);
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
+}
+/**Only for green slider**/
+input[id=inputRangeGreen]::-ms-fill-upper {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,255,0,1) 100%);
+    border: 0px solid rgb(25, 25, 25);
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
+}
+/**Only for blue slider**/
+input[id=inputRangeBlue]::-ms-fill-upper {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,255,1) 100%);
+    border: 0px solid rgb(25, 25, 25);
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
+}
+
+/**For all thumbs**/
+input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px rgb(25, 25, 25);
+    border: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #000000;
+    cursor: pointer;
+}
+/**Only for red slider**/
+input[id=inputRangeRed]:focus::-ms-fill-lower {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
+}
+/**Only for green slider**/
+input[id=inputRangeGreen]:focus::-ms-fill-lower {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,255,0,1) 100%);
+}
+/**Only for blue slider**/
+input[id=inputRangeBlue]:focus::-ms-fill-lower {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,255,1) 100%);
+}
+
+/**Only for red slider**/
+input[id=inputRangeRed]:focus::-ms-fill-upper {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
+}
+/**Only for green slider**/
+input[id=inputRangeGreen]:focus::-ms-fill-upper {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,255,0,1) 100%);
+}
+/**Only for blue slider**/
+input[id=inputRangeBlue]:focus::-ms-fill-upper {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,255,1) 100%);
+}
+/*###SLIDERS - MODIFIED(finish)###*/
+
+/*Text inputs IDs inputTextRed, inputTextGreen, inputTextBlue*/
+#inputTextRed, #inputTextGreen, #inputTextBlue {
+    width: 50px;
+}
+
+/*Output*/
+.outputCircle {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(123, 123, 123);
+    border-radius: 50%;
+    border: solid 7px transparent;
+    background-image: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,255,0,1) 50%, rgba(0,0,255,1) 100%);
+    background-origin: border-box;
+    /*background-clip: content-box, border-box;*/
+    box-shadow: 2px 1000px 1px #ffffff inset;
+    transition: 0.9s;
+    margin: auto;
+}
+
+.outputCircle:hover {
+    border: solid 7px #ffffff;
+}
+
+#resultValue {
+    color: #000000;
+    font-size: 16px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) 
+and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
+{
+   body {
+       background-color: #0075FF;
+       padding-top: 20%;
+   }
+   .container {
+       padding-left: 15px;
+       padding-right: 15px;
+   }
+}
+
+@media screen and (min-width: 321px) and (max-width: 600px) {
+    body {
+        background-color: #0075FF;
+        padding-top: 15%;
+    }
+}

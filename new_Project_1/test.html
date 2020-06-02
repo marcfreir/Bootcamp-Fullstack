@@ -1,0 +1,73 @@
+<!--
+    Created on : 29-May-2020, 05:15:59 AM
+    Author     : Marc Freir
+    License    : This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/test.css">
+    <!--For Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="grid-grid-container">
+            <div class="grid-titleHeader">
+                <!--Main Header-->
+                <h1 class="titleHeader">Color Selector</h1>
+            </div>
+            <!--All Controllers-->
+            <!--For Red Field-->
+            <div class="grid-redLabel">
+                <span class="redLabel">(R) Red</span>
+            </div>
+            <div class="grid-redSlider">
+                <input type="range" name="red-slider" min="0" max="255" value="255" id="inputRangeRed" />
+            </div>
+            <div class="grid-redValue">
+                <input type="text" name="red-value" id="inputTextRed" value="255" disabled />
+            </div>
+            <!--For Green Field-->
+            <div class="grid-greenLabel">
+                <span class="greenLabel">(G) Green</span>
+            </div>
+            <div class="grid-greenSlider">
+                <input type="range" name="green-slider" min="0" max="255" value="123" id="inputRangeGreen" />
+            </div>
+            <div class="grid-greenValue">
+                <input type="text" name="green-value" id="inputTextGreen" value="123" disabled />
+            </div>
+            <!--For Blue Field-->
+            <div class="grid-blueLabel">
+                <span class="blueLabel">(B) Blue</span>
+            </div>
+            <div class="grid-blueSlider">
+                <input type="range" name="blue-slider" min="0" max="255" value="0" id="inputRangeBlue" />
+            </div>
+            <div class="grid-blueValue">
+                <input type="text" name="blue-value" id="inputTextBlue" value="0" disabled />
+            </div>
+            <!--Output-->
+            <div class="grid-outputColor">
+                <div class="outputCircle" id="output_color">
+                    
+                </div>
+                <h3 id="resultValue"></h3>
+            </div>
+        </div>
+    </div>
+    <!--JavaScript Call-->
+    <script src="./js/test.js"></script>
+</body>
+</html>
