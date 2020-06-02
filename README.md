@@ -57,6 +57,8 @@ GET, POST, PUT, and DELETE.
 
 * [X] Practical Project 1 - [Color Picker](https://github.com/marcfreir/Bootcamp-Fullstack/tree/master/Project_1)
 
+* * [X] NEW Practical Project 1 (just for fun) - [Color Selector](https://github.com/marcfreir/Bootcamp-Fullstack/tree/master/Project_1)
+
 
 
 ### Contributing
