@@ -102,3 +102,5 @@ function syncRanges() {
 }
 
 ```
+###### Image Preview
+![](_PREVIEW/color-selector-preview.png)
