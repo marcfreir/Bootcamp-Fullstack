@@ -11,7 +11,7 @@
 * Installing Node.js. Installation of the live-server library.
 * Notions of HTML and CSS. Introduction to JavaScript. JavaScript integration with HTML and CSS.
 * Basic JavaScript - console, comments, primitive types, variables, native server and web APIs,
-functions, decision structures, repetition structures and event handling.
+  functions, decision structures, repetition structures and event handling.
 
 ```
 
@@ -19,10 +19,10 @@ functions, decision structures, repetition structures and event handling.
 
 ```
 * Introduction to backend development. Backend vs. Frontend. Introduction to API development.
-Introduction to Node.js development.
+* Introduction to Node.js development.
 * Introduction to Express. Create HTTP requests, routes and middleware with Express.
 * Introduction to the Insomnia tool. Building HTTP APIs, using the main methods for RESTful services:
-GET, POST, PUT, and DELETE.
+  GET, POST, PUT, and DELETE.
 * Development of CRUD operations. Persistence of Data in Files.
 
 ```
