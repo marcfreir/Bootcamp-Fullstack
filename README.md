@@ -1,4 +1,4 @@
-# Full Stack Developer Bootcamp Repository
+# \begin{center} Full Stack Developer Bootcamp Repository
 
 ## Journey of 10 - 12 weeks
 
